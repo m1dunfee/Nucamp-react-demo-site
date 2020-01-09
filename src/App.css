@@ -1,0 +1,14 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h5 {
+font-family: "Lobster", cursive;
+}
+
+
+/* the h5 here removes the stying on the card-img-overlay */
+.card-img-overlay {
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+}
