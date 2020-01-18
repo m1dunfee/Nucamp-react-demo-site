@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import {CAMPSITES} from '../shared/campsites'
-import {COMMENTS} from '../shared/comments'
-import {PARTNERS} from '../shared/partners'
-import {PROMOTIONS} from '../shared/promotions'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import ContactInfo from './contactInfoComponent'
@@ -10,7 +6,6 @@ import Directory from './directoryComponent';
 import Header from './headerComponent'
 import Footer from './footerComponent'
 import Home from './homeComponent'
-import CampsiteInfo from './campsiteInfoComponent'
 import AboutUs from './aboutUsComponent'
 
 

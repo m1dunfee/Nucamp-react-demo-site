@@ -1,15 +1,15 @@
-import CAMPSITES from '../shared/campsites'
-import COMMENTS from '../shared/comments'
-import PARTNERS from '../shared/partners'
-import PROMPTIONS from '../shared/promotions'
+import {CAMPSITES} from '../shared/campsites'
+import {COMMENTS} from '../shared/comments'
+import {PARTNERS} from '../shared/partners'
+import {PROMOTIONS} from '../shared/promotions'
 
-export const initailState = {
+export const initialState = {
     campsites: CAMPSITES,
     comments: COMMENTS,
     partners: PARTNERS,
-    promotions: PROMPTIONS
+    promotions: PROMOTIONS
 }
 
-export const Reducer = (initailState, action) =>{
+export const Reducer = (state = initialState, action) => {
     return state;
-}
+};
