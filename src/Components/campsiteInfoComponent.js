@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem} from 'reactstrap';
+import React, {Component} from 'react';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button} from 'reactstrap';
 import {Link} from "react-router-dom"
 
 function RenderCampsite({ campsite }) {
@@ -71,7 +71,19 @@ function CampsiteInfo(props) {
             </div>
         );
     }
-    return <div />;
+    return <div/>;
+}
+
+
+
+class CommentForm extends Component{
+    render(){
+        return(
+            <Button onClick={this.handleSubmitComment}>
+                Submit Comment
+            </Button>
+        )
+    }
 }
 
 export default CampsiteInfo;

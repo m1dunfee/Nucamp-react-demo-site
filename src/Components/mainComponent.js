@@ -7,17 +7,19 @@ import Header from './headerComponent'
 import Footer from './footerComponent'
 import Home from './homeComponent'
 import AboutUs from './aboutUsComponent'
+import CampsiteInfo from './campsiteInfoComponent'
 
 
 const mapReduxStateToProps = state =>{
     return{
-        campsite: state.campsite,
+        campsites: state.campsites,
         comments: state.comments,
-        promotion: state.promotion,
-        partner: state.partner
+        promotions: state.promotions,
+        partners: state.partners
 
     }
 }
+
 
 class Main extends Component {
     render() {
@@ -30,12 +32,20 @@ class Main extends Component {
             />
             )
         }
+
+        const CampsiteWithId = ({match}) => {
+            return (
+                <CampsiteInfo campsite={this.props.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]} 
+                  comments={this.props.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)} />
+            );
+        };
+
         return (
             <div>
                 <Header/>
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route path='/directory/:campsiteId' component={this.CampsiteWithId} />
+                    <Route path='/directory/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
                     <Route path='/aboutus' render={()=> <AboutUs partners={this.props.partners}/>}/>
                     <Route exact path='/contactus' component={ContactInfo} />
