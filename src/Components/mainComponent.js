@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import ContactInfo from './contactInfoComponent'
 import Directory from './directoryComponent';
@@ -15,8 +15,7 @@ const mapReduxStateToProps = state =>{
         campsites: state.campsites,
         comments: state.comments,
         promotions: state.promotions,
-        partners: state.partners
-
+        partners: state.partners,
     }
 }
 
