@@ -16,11 +16,11 @@ function About(props) {
         }
     }
 
-    const partners = props.partners.map((partner) => {
+    const partners = props.partners.map((partner, index) => {
         return (
-            <>
+            <div key={index}>
             {RenderPartner(partner)}
-            </>
+            </div>
         );
     });
 
